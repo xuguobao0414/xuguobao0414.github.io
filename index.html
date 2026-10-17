@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>徐国宝 · 律师 · 刑民交叉</title>
+<meta name="description" content="徐国宝律师，上海中夏律师事务所高级合伙人，深耕刑事辩护，专注刑民交叉疑难复杂案件。十四年公安办案经历，双重视角拆解案件。">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-mute: #8a8a8a;
+    --paper: #faf9f7;
+    --card: #ffffff;
+    --accent: #8b2c1e;      /* 印章红 */
+    --accent-deep: #6e2116;
+    --line: #e8e4de;
+    --gold: #b08d4f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* ===== 导航 ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 6vw;
+    background: rgba(250,249,247,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .brand { font-size: 17px; font-weight: 700; letter-spacing: 2px; }
+  nav .brand em { font-style: normal; color: var(--accent); }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav ul a {
+    text-decoration: none; color: var(--ink-soft);
+    font-size: 14px; letter-spacing: 1px; transition: color .2s;
+  }
+  nav ul a:hover { color: var(--accent); }
+
+  /* ===== Hero ===== */
+  header {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 120px 6vw 60px;
+    position: relative;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139,44,30,0.06), transparent),
+      var(--paper);
+  }
+  .hero-name {
+    font-size: 13px; letter-spacing: 6px; color: var(--ink-mute);
+    text-transform: uppercase; margin-bottom: 36px;
+  }
+  .hero-slogan {
+    font-size: clamp(30px, 4.6vw, 54px);
+    font-weight: 700; line-height: 1.55; letter-spacing: 2px;
+  }
+  .hero-slogan .hl { color: var(--accent); }
+  .hero-sub {
+    max-width: 720px; margin: 40px auto 0;
+    font-size: 16px; color: var(--ink-soft); letter-spacing: 1px;
+  }
+  .hero-seal {
+    margin-top: 48px;
+    display: inline-block;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 18px;
+    font-size: 15px; letter-spacing: 4px;
+    transform: rotate(-3deg);
+    border-radius: 4px;
+    opacity: .9;
+  }
+  .scroll-hint {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    font-size: 12px; letter-spacing: 4px; color: var(--ink-mute);
+    animation: bob 2.2s ease-in-out infinite;
+  }
+  @keyframes bob { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,8px)} }
+
+  /* ===== 三栏身份 ===== */
+  .identity {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .identity .col {
+    background: var(--card); padding: 56px 40px;
+  }
+  .identity .col h3 {
+    font-size: 20px; letter-spacing: 2px; margin-bottom: 8px;
+  }
+  .identity .col .tag {
+    font-size: 12px; letter-spacing: 3px; color: var(--accent);
+    margin-bottom: 24px; text-transform: uppercase;
+  }
+  .identity .col p { font-size: 14.5px; color: var(--ink-soft); }
+  .identity .col p + p { margin-top: 12px; }
+  .identity .col b { color: var(--ink); }
+
+  /* ===== 内容区 ===== */
+  section.content { padding: 96px 6vw 120px; }
+  .section-head { text-align: center; margin-bottom: 56px; }
+  .section-head h2 {
+    font-size: 32px; letter-spacing: 4px; font-weight: 700;
+  }
+  .section-head .en {
+    font-size: 12px; letter-spacing: 4px; color: var(--ink-mute); margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  a.card {
+    display: block; text-decoration: none;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 36px 30px;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+  }
+  a.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(26,26,26,0.08);
+    border-color: var(--accent);
+  }
+  .card .num {
+    font-size: 12px; color: var(--gold); letter-spacing: 2px; margin-bottom: 14px;
+  }
+  .card h4 { font-size: 20px; letter-spacing: 1px; margin-bottom: 12px; }
+  .card p { font-size: 14px; color: var(--ink-soft); }
+  .card .arrow {
+    display: inline-block; margin-top: 20px; font-size: 13px; color: var(--accent);
+    letter-spacing: 1px;
+  }
+
+  /* ===== 时间线 ===== */
+  .timeline-wrap {
+    background: var(--ink); color: #f0ece6;
+    padding: 96px 6vw 110px;
+  }
+  .timeline-wrap .section-head h2 { color: #fff; }
+  .timeline-wrap .section-head .en { color: rgba(255,255,255,0.45); }
+  .timeline {
+    max-width: 760px; margin: 0 auto; position: relative;
+  }
+  .timeline::before {
+    content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
+    width: 2px; background: rgba(255,255,255,0.18);
+  }
+  .t-item { position: relative; padding: 0 0 44px 44px; }
+  .t-item:last-child { padding-bottom: 0; }
+  .t-item::before {
+    content: ""; position: absolute; left: 0; top: 8px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--paper); border: 4px solid var(--accent);
+  }
+  .t-item .year {
+    font-size: 13px; letter-spacing: 3px; color: var(--gold); margin-bottom: 6px;
+  }
+  .t-item h4 { font-size: 19px; letter-spacing: 1px; margin-bottom: 8px; color: #fff; }
+  .t-item p { font-size: 14.5px; color: rgba(255,255,255,0.72); }
+
+  /* ===== 联系方式区（参照联系版式） ===== */
+  .contact-hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(120deg, #7a2417 0%, #8b2c1e 45%, #6e2116 100%);
+    color: #fff; padding: 96px 6vw 110px;
+  }
+  .contact-hero::after {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background:
+      repeating-radial-gradient(circle at center,
+        rgba(255,255,255,0.10) 0, rgba(255,255,255,0.10) 1px,
+        transparent 1px, transparent 46px);
+    opacity: .5; pointer-events: none;
+  }
+  .contact-hero::before {
+    content: ""; position: absolute; left: -140px; bottom: -220px;
+    width: 420px; height: 420px; border-radius: 50%;
+    background:
+      repeating-radial-gradient(circle at center,
+        rgba(255,255,255,0.07) 0, rgba(255,255,255,0.07) 1px,
+        transparent 1px, transparent 40px);
+    opacity: .6; pointer-events: none;
+  }
+  .contact-inner {
+    max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1.1fr 1.2fr 0.7fr;
+    gap: 56px; align-items: center;
+  }
+  .c-id { display: flex; align-items: center; gap: 22px; }
+  .avatar {
+    width: 88px; height: 88px; border-radius: 50%; flex: none;
+    background: #fff; color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px; font-weight: 700;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
+  }
+  .c-name h3 { font-size: 30px; letter-spacing: 6px; font-weight: 700; }
+  .c-name span {
+    display: block; margin-top: 6px;
+    font-size: 12px; letter-spacing: 4px; color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+  }
+  .c-tags {
+    margin-top: 26px; font-size: 13.5px; letter-spacing: 1px;
+    color: rgba(255,255,255,0.85);
+  }
+  .c-tags i {
+    font-style: normal; display: inline-block; margin-right: 18px;
+  }
+  .c-tags i::before {
+    content: "•"; margin-right: 8px; color: rgba(255,255,255,0.55);
+  }
+  .c-row {
+    display: flex; align-items: baseline; gap: 22px; padding: 9px 0;
+  }
+  .c-row .k {
+    flex: none; width: 64px;
+    font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+  }
+  .c-row .v { font-size: 15px; letter-spacing: 0.5px; color: rgba(255,255,255,0.95); }
+  .c-row .v a { color: inherit; text-decoration: none; }
+  .c-row .v a:hover { text-decoration: underline; }
+  .c-btns { margin-top: 22px; display: flex; gap: 14px; }
+  .btn {
+    display: inline-block; text-decoration: none;
+    font-size: 13.5px; letter-spacing: 2px;
+    padding: 9px 24px; border-radius: 999px; transition: opacity .2s, background .2s;
+  }
+  .btn-solid { background: #fff; color: var(--accent-deep); font-weight: 600; }
+  .btn-solid:hover { opacity: .88; }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.55); color: #fff;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+  .c-qr { display: flex; justify-content: center; }
+  .qr-box {
+    width: 148px; height: auto; border-radius: 10px;
+    background: #fff;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 8px;
+    border: 2px solid rgba(255,255,255,0.7);
+    outline: 8px solid rgba(255,255,255,0.15); outline-offset: 2px;
+  }
+  .qr-box img { width: 100%; height: auto; display: block; border-radius: 6px; }
+  .qr-box span {
+    font-size: 11px; letter-spacing: 2px; color: var(--ink-soft);
+    padding: 6px 0 2px;
+  }
+
+  footer.site-copy {
+    background: var(--ink); color: rgba(255,255,255,0.55);
+    text-align: center; padding: 22px 6vw; font-size: 12px; letter-spacing: 1px;
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 900px) {
+    .identity { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr 1fr; }
+    nav ul { display: none; }
+    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .c-qr { justify-content: flex-start; }
+  }
+  @media (max-width: 600px) {
+    .cards { grid-template-columns: 1fr; }
+    .hero-slogan { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">徐国宝<em> · </em>律师</div>
+  <ul>
+    <li><a href="cases.html">专业案例</a></li>
+    <li><a href="method.html">办案方法</a></li>
+    <li><a href="#timeline">执业经历</a></li>
+    <li><a href="#contact">联系我们</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div class="hero-name">XU GUOBAO · LAWYER</div>
+  <h1 class="hero-slogan">
+    十四年公安办案，<span class="hl">看得懂侦查；</span><br>
+    十一年刑事辩护，<span class="hl">讲得清辩护。</span>
+  </h1>
+  <p class="hero-sub">
+    徐国宝律师，上海中夏律师事务所<b>高级合伙人</b>，深耕刑事辩护多年，现专注<b>刑民交叉疑难复杂案件</b>。
+    从公安办案一线到刑民交织的争议现场，他熟悉案件的全流程——
+    既是办过案的人，也是为当事人辩护的人。
+  </p>
+  <div class="hero-seal">law徐说故事</div>
+  <div class="scroll-hint">SCROLL</div>
+</header>
+
+<div class="identity">
+  <div class="col">
+    <h3>前公安办案民警</h3>
+    <div class="tag">14 YEARS · POLICE</div>
+    <p>十四年公安办案一线经历，曾任办案能手，熟悉侦查、取证、讯问、移送起诉的每一个环节。</p>
+    <p><b>公诉机关怎么想、证据是怎么来的，他知道。</b></p>
+  </div>
+  <div class="col">
+    <h3>高级合伙人 · 刑民交叉</h3>
+    <div class="tag">SENIOR PARTNER</div>
+    <p>上海中夏律师事务所高级合伙人，深耕刑事辩护十一年，专注刑民交叉疑难复杂案件，现任上海律协刑诉法与刑事辩护专业委员会委员。</p>
+    <p><b>刑民交织处的病灶，他用手术刀式拆解定位。</b></p>
+  </div>
+  <div class="col">
+    <h3>法律内容创作者</h3>
+    <div class="tag">LAW STORYTELLER</div>
+    <p>运营公众号「law徐说故事」，把办案经历与辩护实践写成普通人听得懂的案件故事，让法律走出卷宗。</p>
+    <p><b>每一个案件背后，都是一段真实的人生。</b></p>
+  </div>
+</div>
+
+<section class="content" id="content">
+  <div class="section-head">
+    <h2>全部内容</h2>
+    <div class="en">What I Do</div>
+  </div>
+  <div class="cards">
+    <a class="card" href="cases.html#c1">
+      <div class="num">01</div>
+      <h4>刑事辩护</h4>
+      <p>经济犯罪、职务犯罪、财产类犯罪辩护，以公安办案证据审查思维挖掘实体与程序突破口。</p>
+      <span class="arrow">了解详情 →</span>
+    </a>
+    <a class="card" href="cases.html#c1">
+      <div class="num">02</div>
+      <h4>刑民交叉疑难案件</h4>
+      <p>同一事实引发刑民双重评价：先刑后民 / 刑民并行的程序冲突统筹，合同效力、财产权属、担保责任辨析。</p>
+      <span class="arrow">了解详情 →</span>
+    </a>
+    <a class="card" href="cases.html#c1">
+      <div class="num">03</div>
+      <h4>涉案财产处置与追索</h4>
+      <p>查封冻结应对、赃款赃物认定、追赃挽损、民事确权、执行异议，人身辩护与财产维权并重。</p>
+      <span class="arrow">了解详情 →</span>
+    </a>
+    <a class="card" href="method.html#m1">
+      <div class="num">04</div>
+      <h4>裁判文书拆解</h4>
+      <p>「手术刀式」同步解剖刑事案卷与民事裁判文书，识别刑民混同、事实嵌套、法律评价冲突等核心病灶。</p>
+      <span class="arrow">了解详情 →</span>
+    </a>
+    <a class="card" href="cases.html#c2">
+      <div class="num">05</div>
+      <h4>争议解决</h4>
+      <p>经济犯罪衍生纠纷、合同类刑民交叉争议的一体化解决方案，区分刑事定罪评价与民事权利认定。</p>
+      <span class="arrow">了解详情 →</span>
+    </a>
+    <a class="card" href="#contact">
+      <div class="num">06</div>
+      <h4>联系咨询</h4>
+      <p>刑事案件与刑民交叉争议咨询、委托洽谈，可通过微信扫码或电话、邮件直接联系。</p>
+      <span class="arrow">了解详情 →</span>
+    </a>
+  </div>
+</section>
+
+<div class="timeline-wrap" id="timeline">
+  <div class="section-head">
+    <h2>执业经历</h2>
+    <div class="en">Career Timeline</div>
+  </div>
+  <div class="timeline">
+    <div class="t-item">
+      <div class="year">公安 · 十四年</div>
+      <h4>公安办案一线</h4>
+      <p>长期从事办案工作，历经侦查、取证、讯问到移送起诉的完整流程，曾获上海市公安局先进个人、闵行区政法系统十佳办案能手等称号。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">转型</div>
+      <h4>辞职从法 · 执业律师</h4>
+      <p>辞去公安职务，通过法律职业资格考试，加入上海中夏律师事务所，开启律师执业生涯。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">律师 · 十一年</div>
+      <h4>高级合伙人 · 专注刑民交叉</h4>
+      <p>现任上海中夏律师事务所高级合伙人，办理大量经济犯罪、职务犯罪、合同类刑民交叉案件，运用手术刀式文书拆解技术，为客户提供刑事抗辩、财产保全、民事确权一体化方案。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">当下</div>
+      <h4>law徐说故事</h4>
+      <p>创办公众号「law徐说故事」，以故事化表达分享办案与辩护的实践经验，让更多人看懂法律的运行。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 联系方式区：TEL / MAIL / WECHAT 三行与按钮内的占位信息请替换为真实内容 -->
+<section class="contact-hero" id="contact">
+  <div class="contact-inner">
+    <div class="c-left">
+      <div class="c-id">
+        <div class="avatar">徐</div>
+        <div class="c-name">
+          <h3>徐国宝</h3>
+          <span>XU GUOBAO</span>
+        </div>
+      </div>
+      <div class="c-tags">
+        <i>高级合伙人</i><i>刑民交叉</i><i>law徐说故事主理人</i>
+      </div>
+    </div>
+    <div class="c-mid">
+      <div class="c-row">
+        <span class="k">Tel</span>
+        <span class="v"><a href="tel:+8613818682082">+86 138-1868-2082</a></span>
+      </div>
+      <div class="c-row">
+        <span class="k">Mail</span>
+        <span class="v"><a href="mailto:xgb2963@163.com">xgb2963@163.com</a></span>
+      </div>
+      <div class="c-row">
+        <span class="k">Wechat</span>
+        <span class="v">微信扫码添加（见右侧二维码）</span>
+      </div>
+      <div class="c-btns">
+        <a class="btn btn-solid" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:%E5%BE%90%E5%9B%BD%E5%AE%9D%20%E5%BE%8B%E5%B8%88%0AORG:%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%A4%8F%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80%0ATEL:+8613818682082%0AEMAIL:xgb2963%40163.com%0AEND:VCARD" download="xuguobao.vcf">存入通讯录</a>
+        <a class="btn btn-ghost" href="mailto:xgb2963@163.com">发邮件</a>
+      </div>
+    </div>
+    <div class="c-qr">
+      <div class="qr-box">
+        <img src="wechat-qr.jpg" alt="微信二维码">
+        <span>微信扫码添加</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-copy">
+  © 2026 徐国宝律师 · xuguobao.com · 本站内容仅供交流参考，不构成正式法律意见
+</footer>
+
+</body>
+</html>
