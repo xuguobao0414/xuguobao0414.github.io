@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>专业案例 · 徐国宝律师</title>
-<meta name="description" content="徐国宝律师办理的刑事辩护案例（摘自上海中夏律师事务所官网公开信息）：无罪不起诉、重罪轻判。">
+<meta name="description" content="徐国宝律师办理的刑事辩护案例：无罪与不起诉、缓刑与轻刑、重罪有效辩护。均为生效裁判或检察机关正式决定，当事人信息已脱敏。">
 <style>
   :root {
     --ink: #1a1a1a; --ink-soft: #4a4a4a; --ink-mute: #8a8a8a;
@@ -34,14 +34,27 @@
   nav ul a:hover { color: var(--accent); }
 
   .page-hero {
-    padding: 88px 6vw 56px; text-align: center;
+    padding: 88px 6vw 48px; text-align: center;
     background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139,44,30,0.07), transparent), var(--paper);
   }
   .page-hero h1 { font-size: 34px; letter-spacing: 4px; }
   .page-hero .en { font-size: 12px; letter-spacing: 4px; color: var(--ink-mute); margin-top: 10px; text-transform: uppercase; }
   .page-hero p { max-width: 720px; margin: 20px auto 0; font-size: 15px; color: var(--ink-soft); }
 
-  main { max-width: 880px; margin: 0 auto; padding: 24px 6vw 96px; }
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    max-width: 880px; margin: 36px auto 0; padding: 0 6vw; gap: 14px;
+  }
+  .stats .cell {
+    background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent);
+    border-radius: 8px; padding: 18px 10px 16px; text-align: center;
+  }
+  .stats .num { font-size: 30px; font-weight: 700; color: var(--accent); letter-spacing: 1px; }
+  .stats .num small { font-size: 15px; font-weight: 400; }
+  .stats .lbl { font-size: 12.5px; color: var(--ink-mute); letter-spacing: 2px; margin-top: 2px; }
+  @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+  main { max-width: 880px; margin: 0 auto; padding: 40px 6vw 96px; }
   .notice {
     background: #fdf6f0; border: 1px solid #eeddc9; border-radius: 8px;
     padding: 16px 22px; font-size: 13px; color: #7a5a2e; margin-bottom: 44px;
@@ -66,6 +79,8 @@
     padding: 1px 12px; margin-bottom: 12px;
   }
   .case b { color: var(--accent-deep); }
+  .case .pts { display: block; margin-top: 10px; font-size: 12.5px; color: var(--ink-mute); letter-spacing: 1px; }
+  .case .pts i { font-style: normal; color: var(--gold); margin-right: 4px; }
 
   footer.site-copy {
     background: var(--ink); color: rgba(255,255,255,0.55);
@@ -91,84 +106,230 @@
 <div class="page-hero">
   <h1>专业案例</h1>
   <div class="en">Selected Cases · Anonymized</div>
-  <p>以下案例摘自上海中夏律师事务所官网"徐国宝律师"个人主页的公开披露，当事人信息均已按官网口径脱敏。案件结果受个案事实与证据影响，过往结果不代表对未来案件的承诺。</p>
+  <p>以下案例均摘自徐国宝律师亲办案件的生效裁判文书、检察机关正式法律文书及上海中夏律师事务所官网公开信息。案件结果受个案事实与证据影响，过往结果不代表对未来案件的承诺。</p>
+  <div class="stats">
+    <div class="cell"><div class="num">150<small>+</small></div><div class="lbl">刑案办案卷宗</div></div>
+    <div class="cell"><div class="num">7</div><div class="lbl">不起诉 · 撤案</div></div>
+    <div class="cell"><div class="num">11</div><div class="lbl">缓刑判决</div></div>
+    <div class="cell"><div class="num">10</div><div class="lbl">重罪从轻</div></div>
+  </div>
 </div>
 
 <main>
   <div class="notice">
-    <b>来源声明：</b>本页案例信息来源于<a href="https://zhongxialawyers.cn/cn/Laywer/05/c7ad2d253e4d5e00" target="_blank" rel="noopener">上海中夏律师事务所官网 · 徐国宝律师个人主页</a>，以官网披露内容为准。为保护当事人隐私，姓名等信息已作脱敏处理。
+    <b>来源与脱敏声明：</b>本页案例来自徐国宝律师亲办案件的生效法律文书（裁判文书、不起诉决定书等）及<a href="https://zhongxialawyers.cn/cn/Laywer/05/c7ad2d253e4d5e00" target="_blank" rel="noopener">上海中夏律师事务所官网 · 徐国宝律师个人主页</a>。为保护当事人隐私，姓名按「姓 + 星号」脱敏，不展示案号及其他可识别信息；涉案金额与刑罚均以生效裁判认定为准。判决所列各项从宽情节，均为辩护人逐项提出辩护意见并争取、经裁判采认的结果——情节不会自动到来，每一项背后都是一轮具体的辩护工作。
   </div>
 
-  <h2 class="group-title" id="c1">无罪之辩</h2>
-  <div class="group-sub">羁押之后，还人以清白——不起诉、撤案与国家赔偿</div>
+  <h2 class="group-title" id="c1">无罪与不起诉</h2>
+  <div class="group-sub">羁押之后还人以清白，追诉之前终止程序——不起诉、撤案与国家赔偿</div>
 
   <div class="case">
     <span class="tag">诈骗罪 · 无罪 · 国家赔偿</span>
     <h3>王*涉嫌诈骗 60 余万元案</h3>
     <p>当事人因涉嫌诈骗 60 余万元被批准逮捕并羁押 <b>8 个月</b>。经无罪辩护，最终检察机关<b>不起诉</b>，当事人获释并依法获得<b>国家赔偿</b>。</p>
+    <span class="pts"><i>◆</i>无罪辩护获采纳 · 羁押 8 个月后终止追诉并获国家赔偿</span>
   </div>
 
   <div class="case">
     <span class="tag">虚开增值税专用发票罪 · 涉案 238 万余元 · 不起诉</span>
     <h3>黄**涉嫌虚开增值税专用发票案</h3>
-    <p>被指控虚开增值税专用发票，涉案金额 <b>238 万余元</b>。经辩护，检察机关审查后作出<b>不起诉</b>决定，当事人最终未被追究刑事责任。</p>
+    <p>被指控虚开增值税专用发票，涉案金额 <b>238 万余元</b>。经辩护，检察机关审查后作出<b>不起诉</b>决定，当事人未被追究刑事责任。</p>
+    <span class="pts"><i>◆</i>虚开类犯罪的罪与非罪之辩 · 审查起诉阶段终止追诉</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">虚开增值税专用发票罪 · 不起诉</span>
+    <h3>华**涉嫌虚开增值税专用发票案</h3>
+    <p>侦查阶段起即介入辩护，经检察机关审查，最终作出<b>不起诉</b>决定，刑事程序终止。</p>
+    <span class="pts"><i>◆</i>侦查阶段起全程辩护 · 审查起诉阶段终止追诉</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法经营罪 · 不起诉</span>
+    <h3>黄**涉嫌非法经营案</h3>
+    <p>被指控非法经营。经辩护，检察机关审查后作出<b>不起诉</b>决定，当事人未被追究刑事责任。</p>
+    <span class="pts"><i>◆</i>非法经营罪与非罪之辩 · 审查起诉阶段终止追诉</span>
   </div>
 
   <div class="case">
     <span class="tag">强奸罪 · 不起诉</span>
     <h3>**玮涉嫌强奸案</h3>
     <p>经辩护，检察机关审查后作出<b>不起诉</b>决定。</p>
+    <span class="pts"><i>◆</i>审查起诉阶段终止追诉 · 未被追究刑事责任</span>
   </div>
 
   <div class="case">
     <span class="tag">强奸罪 · 撤案不起诉</span>
     <h3>**帅涉嫌强奸案</h3>
     <p>侦查阶段经辩护，案件<b>撤销、不起诉</b>，刑事程序终结。</p>
+    <span class="pts"><i>◆</i>侦查阶段即终止程序 · 撤案 + 不起诉</span>
   </div>
 
   <div class="case">
-    <span class="tag">强奸罪 · 撤诉撤案</span>
+    <span class="tag">强奸罪 · 审查起诉阶段撤案</span>
     <h3>朱*涉嫌强奸案</h3>
-    <p>经辩护，公诉机关<b>撤回起诉</b>，案件撤案处理。</p>
+    <p><b>审查起诉阶段</b>即介入辩护，向检察机关提交辩护意见，明确指出本案<b>事实不清、证据不足</b>，并从报案人的真实身份与报案动机、案发后"谈判—谅解—收款"的异常节奏、关键证人证言缺失等环节逐项指出疑点，主张当事人不构成犯罪。案件最终<b>撤案处理</b>，当事人未被追究刑事责任。</p>
+    <span class="pts"><i>◆</i>事实不清、证据不足之辩 · 审查起诉阶段即终止追诉 · 案件未进入审判程序</span>
   </div>
 
-  <h2 class="group-title" id="c2">重罪有效辩护</h2>
-  <div class="group-sub">在重罪指控中争取显著低于法定刑段的判决</div>
+  <h2 class="group-title" id="c2">缓刑与轻刑</h2>
+  <div class="group-sub">在数额巨大、刑期三年以上的指控档次中，为当事人争取到不用入狱的结果</div>
 
   <div class="case">
-    <span class="tag">职务侵占罪 · 涉案 7 亿</span>
-    <h3>某著名地产公司总经理涉嫌职务侵占案</h3>
-    <p>涉案金额 <b>7 亿元</b>，依法属数额特别巨大、刑期十年以上档次。经有效辩护，最终<b>从轻判处 7 年</b>。</p>
+    <span class="tag">合同诈骗 → 职务侵占（改变定性） · 涉案 532 万余元 · 缓刑</span>
+    <h3>戴**职务侵占案</h3>
+    <p>本案<b>以合同诈骗罪立案侦查并逮捕</b>。辩护人介入后提出当事人系利用职务便利截留本单位财物、应以职务侵占罪定性的辩护意见，推动案件<b>以职务侵占罪</b>起诉、审判。审理阶段辩护人持续推动退赔与刑事和解——在辩护人协调下，当事人家属退赔全部违法所得 512 万余元并预缴罚金，<b>取得被害单位谅解</b>，最终<b>判处有期徒刑三年，缓刑五年</b>。</p>
+    <span class="pts"><i>◆</i>罪名之辩（合同诈骗→职务侵占） · 辩护促成的全额退赔与被害单位谅解 · 缓刑</span>
   </div>
 
   <div class="case">
-    <span class="tag">合同诈骗罪 · 涉案 400 亿</span>
+    <span class="tag">走私普通货物罪 · 偷逃税款 319 万元 · 缓刑</span>
+    <h3>张**走私普通货物案</h3>
+    <p>作为涉案单位直接负责的主管人员被诉走私普通货物，经海关计核偷逃税款 <b>319 万元</b>；当事人于移送起诉前被<b>逮捕</b>。辩护人介入后，对<b>价税鉴定方法与认定金额</b>提出异议，并以推动<b>认罪认罚、主动退出违法所得</b>为核心展开罪轻辩护。在当事人向法院主动退出违法所得 <b>50 万元</b>、单位预缴全部罚金后，量刑建议与辩护意见均获采纳，<b>判处有期徒刑三年，缓刑五年</b>。辩护人对该类货物价税鉴定方法提出的异议，<b>后被司法解释吸纳</b>，此类案件的定罪金额认定自此大幅下降。</p>
+    <span class="pts"><i>◆</i>价税鉴定方法之辩（异议后被司法解释吸纳） · 认罪认罚 · 主动退出违法所得 50 万元 · 逮捕状态下取得缓刑</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">销售假冒注册商标的商品罪 · 销售金额 300 万元 · 缓刑</span>
+    <h3>乔**销售假冒注册商标的商品案</h3>
+    <p>涉销售假冒“3M”注册商标口罩，销售金额 <b>300 万元</b>。辩护人提出并坐实<b>自首</b>情节（自动投案、如实供述），当庭完成<b>认罪认罚</b>，最终<b>判处有期徒刑三年，缓刑四年</b>。</p>
+    <span class="pts"><i>◆</i>自首情节经辩护认定 · 当庭认罪认罚 · 缓刑</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法吸收公众存款罪 · 涉案 1458 万余元 · 缓刑</span>
+    <h3>陆**非法吸收公众存款案</h3>
+    <p>涉非法吸收公众存款 <b>1458 万余元</b>。辩护人推动当事人<b>自首</b>获判决确认，并组织家属<b>代为退赔 38.1 万元</b>；在同类案件普遍实刑的判决环境下，<b>判处有期徒刑八个月，缓刑一年</b>。</p>
+    <span class="pts"><i>◆</i>自首经判决确认 · 辩护促成的代为退赔 · 实刑罪名下的缓刑结果</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">假冒注册商标罪 · 涉案 156 万余元 · 缓刑</span>
+    <h3>施**假冒注册商标案</h3>
+    <p>涉假冒注册商标，涉案金额 <b>156 万余元</b>。辩护人发掘并成功<b>举证立功情节</b>，获判决认定依法<b>减轻处罚</b>；又促成当事人<b>积极退赃</b>、取得<b>权利人谅解</b>，<b>判处有期徒刑一年六个月，缓刑二年</b>。</p>
+    <span class="pts"><i>◆</i>立功情节经辩护举证成立（减轻处罚） · 退赃 + 权利人谅解均系辩护促成</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">走私普通货物罪 · 偷逃税款 117 万余元 · 缓刑</span>
+    <h3>肖**走私普通货物案</h3>
+    <p>涉走私普通货物，经计核偷逃税款 <b>117 万余元</b>。辩护人提出当事人应系<b>自动投案并如实供述</b>，判决确认<b>自首</b>成立、依法从轻，<b>判处有期徒刑一年三个月，缓刑一年三个月</b>。</p>
+    <span class="pts"><i>◆</i>自首情节经辩护认定并获依法从轻 · 单位犯罪中责任人员获缓刑</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">职务侵占罪 · 涉案 100 万元 · 缓刑</span>
+    <h3>张**职务侵占案</h3>
+    <p>被指控职务侵占 <b>100 万元</b>。辩护人推动<b>自首</b>认定（获<b>减轻处罚</b>档位）并促成当事人<b>向被害单位退出全部涉案款项</b>，叠加认罪认罚，<b>判处有期徒刑一年，缓刑一年</b>。</p>
+    <span class="pts"><i>◆</i>自首获减轻处罚档位 · 全额退赔系辩护促成 · 认罪认罚</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">掩饰、隐瞒犯罪所得罪 · 涉案 50 万元 · 缓刑</span>
+    <h3>王**掩饰、隐瞒犯罪所得案</h3>
+    <p>被指控掩饰、隐瞒犯罪所得 <b>50 万元</b>。辩护人主张当事人在共同犯罪中<b>起次要作用</b>，获判决认定<b>从犯</b>、依法<b>减轻处罚</b>；结合坦白与认罪认罚，<b>判处有期徒刑一年八个月，缓刑一年八个月</b>。</p>
+    <span class="pts"><i>◆</i>从犯地位经辩护认定（减轻处罚） · 坦白 + 认罪认罚</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">诈骗罪 · 涉案 49.5 万余元 · 缓刑</span>
+    <h3>张**诈骗案</h3>
+    <p>被指控诈骗 <b>49.5 万余元</b>，属数额巨大、刑期三年以上档次。辩护人以<b>退赃退赔</b>和<b>被害单位谅解</b>为核心展开罪轻辩护并促成落实，叠加如实供述与认罪认罚，<b>判处有期徒刑三年，缓刑三年</b>。</p>
+    <span class="pts"><i>◆</i>退赃退赔与被害单位谅解均系辩护促成 · 数额巨大档内的缓刑结果</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">销售假冒注册商标的商品罪 · 涉案 51.7 万余元 · 主犯获缓刑</span>
+    <h3>田**销售假冒注册商标的商品案</h3>
+    <p>涉销售假冒滤清器、机油等 <b>51.7 万余元</b>，且被认定<b>系主犯</b>——在主犯的不利地位下，辩护人仍以坦白、认罪认罚做实罪轻辩护，最终<b>判处有期徒刑一年二个月，缓刑一年二个月</b>。</p>
+    <span class="pts"><i>◆</i>主犯地位下的缓刑 · 坦白 + 认罪认罚辩护落地</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">合同诈骗罪 · 22 名被告人中唯一缓刑</span>
+    <h3>李*涉嫌合同诈骗案</h3>
+    <p>本案系经典的“<b>古董拍卖</b>”被控合同诈骗案，<b>同案被告人达 22 名</b>。侦查机关将当事人认定为公司<b>股东</b>。辩护人逐项核对工商登记、出资凭证、分红记录，并比对各同案人笔录（对持股来历、持股比例说法互不一致），论证当事人<b>仅为业务总监、并非股东</b>，其责任范围不应按股东地位评价；并说服法院<b>树立典型</b>，为后续<b>追赃挽损</b>提供样本。最终当事人<b>获判缓刑，系全案 22 名被告人中唯一获缓刑者</b>。</p>
+    <span class="pts"><i>◆</i>股东身份之辩（股东→业务总监，剥离按股东地位评价的责任） · 22 名被告人中唯一缓刑</span>
+  </div>
+
+  <h2 class="group-title" id="c3">重罪有效辩护</h2>
+  <div class="group-sub">在十年以上甚至无期档次的重罪指控中，把刑期辩到法定档次之下</div>
+
+
+  <div class="case">
+    <span class="tag">合同诈骗罪 · 涉案 400 亿 · 判 8 年</span>
     <h3>某著名 400 亿合同诈骗案（第三被告）</h3>
-    <p>全国瞩目的特大合同诈骗案，担任<b>第三被告人</b>的辩护人，最终<b>从轻判处 8 年</b>。</p>
+    <p>全国瞩目的特大合同诈骗案，担任<b>第三被告人</b>的辩护人，就当事人<b>参与程度、责任范围与地位作用</b>逐项提出辩护意见，最终<b>从轻判处 8 年</b>。</p>
+    <span class="pts"><i>◆</i>特大案件中的责任切割之辩 · 第三被告获从轻</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">虚开增值税专用发票罪 · 对外虚开 30 亿余元 · 判五年六个月</span>
+    <h3>诸**虚开增值税专用发票案</h3>
+    <p>涉虚开增值税专用发票，对外虚开价税合计达 <b>30 亿余元</b>。辩护人当庭坚持<b>自首</b>之辩获判决采纳（认定自动投案、如实供述），<b>从犯</b>地位亦经辩护确认、依法<b>减轻处罚</b>；辩护人并推动当事人<b>退出违法所得 123 万元</b>，最终<b>决定执行有期徒刑五年六个月</b>（同案首要分子分别获刑十四年六个月、十一年），量刑显著低于同案重刑预期。</p>
+    <span class="pts"><i>◆</i>自首系辩护人当庭据理力争所致 · 从犯（减轻处罚）经辩护确认 · 退赃 123 万元系辩护促成</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">受贿罪 · 涉案 1032 万余元 · 判七年三个月</span>
+    <h3>张**受贿案</h3>
+    <p>被指控受贿 <b>1032 万余元</b>，依法属数额特别巨大、刑期十年以上档次。辩护人确立<b>自首</b>情节（获<b>减轻处罚</b>）并推动当事人<b>全额退赃、预缴罚金</b>、认罪认罚，<b>判处有期徒刑七年三个月</b>，在法定档次以下量刑。</p>
+    <span class="pts"><i>◆</i>自首获减轻处罚 · 全额退赃 1032.6 万元与预缴罚金均系辩护落实</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法吸收公众存款罪 · 涉案 2609 万余元 · 判一年</span>
+    <h3>汪**非法吸收公众存款案</h3>
+    <p>涉非法吸收公众存款 <b>2609 万余元</b>。辩护人主张的<b>自首</b>获判决确认，并组织家属在审理期间<b>代为退缴部分赃款</b>，<b>判处有期徒刑一年</b>。</p>
+    <span class="pts"><i>◆</i>自首经判决确认 · 审理中代为退缴系辩护促成</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法吸收公众存款罪 · 涉案 1.2 亿余元 · 判一年五个月</span>
+    <h3>宋**非法吸收公众存款案</h3>
+    <p>涉非法吸收公众存款 <b>1.2 亿余元</b>，数额特别巨大。辩护人主张的<b>从犯</b>（应<b>减轻处罚</b>）与<b>自首</b>（可减轻处罚）双双获判决采纳，审理中又促成亲属<b>代为赔偿投资人损失</b>，<b>判处有期徒刑一年五个月</b>。</p>
+    <span class="pts"><i>◆</i>从犯 + 自首双重减轻经辩护确认 · 代为赔偿系辩护促成</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法吸收公众存款罪 · 涉案 1 亿元 · 判二年六个月</span>
+    <h3>张**非法吸收公众存款案</h3>
+    <p>涉非法吸收公众存款 <b>1 亿余元</b>。辩护人主张的<b>从犯</b>地位与<b>自首</b>情节均获判决认定（依法<b>减轻处罚</b>、从轻处罚），并推动当事人审理中<b>退赔钱款 12.5 万元</b>，<b>判处有期徒刑二年六个月</b>。</p>
+    <span class="pts"><i>◆</i>从犯 + 自首均经辩护认定 · 退赔 12.5 万元系辩护促成</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法吸收公众存款罪 · 涉案 1 亿余元 · 判三年</span>
+    <h3>朱**非法吸收公众存款案</h3>
+    <p>涉非法吸收公众存款 <b>1 亿余元</b>，数额特别巨大。辩护人确立当事人<b>从犯</b>地位与<b>自首</b>情节（减轻、从轻处罚），在数额特别巨大档内<b>判处有期徒刑三年</b>。</p>
+    <span class="pts"><i>◆</i>从犯（减轻处罚）+ 自首（从轻处罚）均经辩护认定</span>
+  </div>
+
+  <div class="case">
+    <span class="tag">非法经营罪 · 涉案 1209 万余元 · 判二年一个月</span>
+    <h3>郑**非法经营案</h3>
+    <p>涉案 <b>1209 万余元</b>。辩护人提出当事人<b>受纠参与、起次要作用</b>，获判决认定<b>从犯</b>、依法<b>减轻处罚</b>；<b>自首</b>情节获确认（五名同案被告人中仅本案当事人一人获自首认定），并推动当事人在审理期间<b>退缴违法所得 30 万元</b>，<b>判处有期徒刑二年一个月</b>，<b>实现实报实销效果</b>。</p>
+    <span class="pts"><i>◆</i>从犯（减轻处罚）经辩护认定 · 全案唯一自首 · 审理中退缴违法所得 30 万元 · 实报实销</span>
   </div>
 
   <div class="case">
     <span class="tag">故意伤害罪（致人死亡）</span>
-    <h3>龙**涉嫌故意伤害致人死亡案</h3>
-    <p>故意伤害致人死亡，法定刑十年以上。经辩护，<b>从轻判处 4 年</b>。</p>
+    <h3>**龙涉嫌故意伤害致人死亡案</h3>
+    <p>故意伤害致人死亡，法定刑十年以上。辩护人就<b>案件起因、当事人行为与死亡结果的因果关系、被害人过错、医疗过错</b>等提出辩护意见并促成从轻，最终<b>从轻判处 4 年</b>。</p>
+    <span class="pts"><i>◆</i>因果关系 + 被害人过错 + 医疗过错三重辩点 · 十年以上档内判 4 年</span>
   </div>
 
   <div class="case">
     <span class="tag">故意伤害罪（致人死亡）</span>
     <h3>黄**涉嫌故意伤害致人死亡案</h3>
-    <p>故意伤害致人死亡，法定刑十年以上。经辩护，<b>从轻判处 8 年</b>。</p>
+    <p>故意伤害致人死亡，法定刑十年以上。辩护人就<b>案件起因、被害人过错</b>与当事人在案件中的作用提出辩护意见并促成从轻，最终<b>从轻判处 8 年</b>。</p>
+    <span class="pts"><i>◆</i>被害人过错 + 作用与情节之辩 · 十年以上档内判 8 年</span>
   </div>
 
   <div class="case">
-    <span class="tag">职务侵占罪 · 涉案 500 余万元 · 缓刑</span>
-    <h3>戴**职务侵占案</h3>
-    <p>被指控职务侵占 <b>500 余万元</b>，依法属数额巨大、刑期三年以上档次。经辩护，最终<b>获判缓刑</b>，当事人免于监禁羁押。</p>
-  </div>
-
-  <div class="case">
-    <span class="tag">多样化成果</span>
-    <h3>缓刑与不批捕案件</h3>
-    <p>执业以来另办理多起获判<b>缓刑</b>、<b>不予批准逮捕后不再追究</b>的案件。</p>
+    <span class="tag">更多积累</span>
+    <h3>持续办理中的辩护记录</h3>
+    <p>执业以来另办理多起获判<b>缓刑</b>、<b>不予批准逮捕后不再追究</b>及侦查、审查起诉阶段<b>撤案、不起诉</b>的案件；更多可公开案例正随生效文书陆续整理披露。</p>
   </div>
 </main>
 
